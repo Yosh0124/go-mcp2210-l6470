@@ -1,0 +1,8 @@
+baud_rate: 1000000
+idle_cs_val: 0x1ff
+active_cs_val: 0x1fe
+cs_to_data_delay: 3
+data_to_data_delay: 10
+data_to_cs_delay: 1
+spi_mode: 0x03
+cs_mask: 0x01
