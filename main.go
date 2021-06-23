@@ -16,12 +16,12 @@ import (
 
 func main() {
 	// ログをセット
-	// const filename string = "debug.log"
-	// f, err := os.OpenFile(filename, os.O_WRONLY|os.O_CREATE, 0755)
-	// if err != nil {
-	// 	logrus.Panicln(err.Error())
-	// }
-	// logrus.SetOutput(f)
+	const filename string = "debug.log"
+	f, err := os.OpenFile(filename, os.O_WRONLY|os.O_CREATE, 0755)
+	if err != nil {
+		logrus.Panicln(err.Error())
+	}
+	logrus.SetOutput(f)
 	// 設定値をロード
 	conf := new(config.Config)
 	if err := conf.Load("./config.yml"); err != nil {
